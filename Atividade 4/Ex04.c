@@ -24,39 +24,5 @@ int main(){
         printf("Nao e um palindromo.\n");
     }
 
-
-
-
-
-
-
-
-
-
-    // int numero, palindromo = 0, d;
-
-    // printf("Digite um número inteiro: ");
-    // scanf("%d", &numero);
-
-    // while (numero)
-    // {
-    //     int d = numero % 10;
-    //     palindromo = palindromo * 10 + d;
-    //     numero /= 10;
-    //     palindromo = d;
-
-    //     // printf("var d = %d", d);
-
-    // }
-
-    // if (palindromo == numero)
-    //     {
-    //         printf(" O numero %d é um palindromo.\n", numero);
-    //     }
-    //     else
-    //     {
-    //         printf(" O numero %d nao é um palindromo.\n", numero);
-    //     }
-
     return 0;
 }
