@@ -13,7 +13,7 @@ int main(){
 
     for (int i = 0; i < LINHAS; i++){
         for (int j = 0; j < COLUNAS; j++){ 
-            printf("Digite um valor para a linha %d: culuna %d: ", i, j);
+            printf("Digite um valor para a linha %d: culuna %d: ", i+1, j+1);
             scanf("%d", &mat[i][j]);    
         }
     }
