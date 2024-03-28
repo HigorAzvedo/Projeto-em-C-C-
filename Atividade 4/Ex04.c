@@ -5,7 +5,7 @@ int main(){
     setlocale(LC_ALL, "Portuguese");
 
 
-    int numero, palindromo = 0, numOriginal;
+    int numero, palindromo = 0, numOriginal, calc;
 
     printf("Digite um numero inteiro: ");
     scanf("%d", &numero);
@@ -13,8 +13,8 @@ int main(){
     numOriginal = numero;
 
     while (numero > 0) {
-        int digito = numero % 10;
-        palindromo = palindromo * 10 + digito;
+        calc = numero % 10;
+        palindromo = palindromo * 10 + calc;
         numero /= 10;
     }
 
