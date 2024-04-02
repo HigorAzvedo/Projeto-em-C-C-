@@ -15,12 +15,18 @@ int main(){
         }
     }
 
+    for(int i = 1; i <= LINHAS; i++){
+        printf("\n");
+        for (int j = 1; j <= COLUNAS; j++){
+            printf("%5d", mat[i][j] );
+        }
+    }
+
     for (int i = 1; i <= LINHAS; i++){
         for (int j = 1; j <= COLUNAS; j++){
             if(i == j){
                 diagonalPrinc += mat[i][j];
             }
-            
         }
     }
 
@@ -32,7 +38,7 @@ int main(){
         }
     }
 
-    printf("A soma da Diagonal Principal = %d \n", diagonalPrinc);
+    printf("\nA soma da Diagonal Principal = %d \n", diagonalPrinc);
     printf("O produto da Diagonal Secundaria =  %d \n", DiagonalSec);
 
     return 0;
