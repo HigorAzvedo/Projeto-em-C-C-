@@ -24,6 +24,15 @@ int main(){
         }
     }
 
+    for (int i = 0; i < LINHAS; i++){
+        printf("\n");
+        for (int j = 0; j < COLUNAS; j++){ 
+            printf("%4d", mat[i][j]);
+        }
+    }
+
+    printf("\n\nA matriz multiplicada por %d e igual a: \n", numero);
+    
     for(int i = 0; i < LINHAS; i++){
         printf("\n");
         for (int j = 0; j < COLUNAS; j++){
