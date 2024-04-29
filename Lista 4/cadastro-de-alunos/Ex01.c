@@ -70,10 +70,10 @@ void preenchendoDadosDosAlunos(){
     ponteiroAluno = alunos; 
     
     /*    DADOS DO ALUNO    */
-    printf("--DIGITE OS DADOS DOS ALUNOS--\n\n");
+    printf("--DIGITE OS DADOS DOS ALUNOS--\n");
 
     for (int i = 0; i < MAX; i++){
-        printf("Cadastro do Aluno %d\n\n", i + 1);
+        printf("\n\nCadastro do Aluno %d\n", i + 1);
         printf("\nNome completo do aluno %d: ", i + 1);
         gets(alunos[i].nomeCompleto);
 
