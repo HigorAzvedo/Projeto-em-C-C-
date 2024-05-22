@@ -39,7 +39,7 @@ struct disciplina{
     char professor[50];
 };
 
-Aluno* insereAluno(Aluno *l);
+Aluno* insereAluno(Aluno *l, int *cont);
 void imprimeAluno (Aluno* l);
 void limparDados(Aluno* l);
 
@@ -58,11 +58,9 @@ int main(){
 
 
     Aluno *listaAlunos = NULL;
-    int contador = 0;
-    while(contador < 10){
-        listaAlunos = insereAluno(listaAlunos);
-
-        contador ++;
+    int continuar = 1;
+    while(continuar == 1){
+        listaAlunos = insereAluno(listaAlunos, &continuar);
     }
 
     imprimeAluno(listaAlunos);
@@ -71,19 +69,28 @@ int main(){
     return 0;   
 }
 
-Aluno* insereAluno(Aluno *l){
+Aluno* insereAluno(Aluno *l, int *cont){
+
     Aluno *novo = (Aluno*) malloc(sizeof(Aluno));
     novo->prox = l;
 
-    for (int i = 0; i < 1; i++){
+    // for (int i = 0; i < 1; i++){
         
         printf("\n\n--Cadastro dos Alunos--\n");
         printf("\nNome completo do aluno: ");
         gets(novo->nomeCompleto);
 
         printf("Digite a matricula do aluno (somente numeros): ");
-        scanf("%d", &novo->matricula);
+        int matriculaLida = 0;
+        scanf("%d", &matriculaLida);
         getchar();
+
+        if(matriculaLida == -1){
+            *cont = -1;
+            return l;
+        }
+
+        novo->matricula = matriculaLida;
 
         printf("Nome do curso do aluno : ");
         gets(novo->curso);
@@ -170,7 +177,7 @@ Aluno* insereAluno(Aluno *l){
         getchar();
 
         printf("\n");
-    }
+    //}
     
     return novo;
 
